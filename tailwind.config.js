@@ -31,6 +31,7 @@ module.exports = {
     },
     fontFamily: {
       ...tailwindDefault.fontFamily,
+      soraSans: ["Sora", "sans-serif"],
       firaCode: ["Fira Code", "sans-serif"],
       firaSans: ["Fira Sans", "sans-serif"],
     },
@@ -46,7 +47,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      display: ["dark"],
+      display: ["light"],
     },
   },
   plugins: [],
