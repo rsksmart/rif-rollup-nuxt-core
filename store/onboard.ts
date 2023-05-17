@@ -322,7 +322,7 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
                 return reject(new Error("Unable to switch network"));
               }
 
-              if ((switchError as JsonRpcError<unknown>).code !== 4902 && (switchError as any).data?.originalError?.code !== 4902) {
+              if ((switchError as JsonRpcError).code !== 4902 && (switchError as any).data?.originalError?.code !== 4902) {
                 return reject(switchError);
               }
 

@@ -1,9 +1,9 @@
 import { Address, Network, TokenSymbol, NFT, ChangePubKeyFee, LegacyChangePubKeyFee, TokenLike, PubKeyHash, ApiTransaction } from "zksync/build/types";
 import type { BigNumber, BigNumberish } from "ethers";
 
-export type Link = `https://${string}/`;
+export type Link = `https://${string}/` | `http://localhost:${string}/`;
 
-export type EthereumNetwork = "goerli" | "mainnet";
+export type EthereumNetwork = "goerli" | "mainnet" | "localrskregtest";
 
 export type TransactionType = "Withdraw" | "Transfer" | "FastWithdraw" | "MintNFT" | "WithdrawNFT" | "FastWithdrawNFT" | ChangePubKeyFee | LegacyChangePubKeyFee | "Swap";
 

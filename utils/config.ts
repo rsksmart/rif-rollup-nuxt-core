@@ -37,6 +37,17 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
       mint: "https://mint.zksync.dev/",
     },
   },
+  localhost: {
+    ethereumNetwork: "localrskregtest",
+    api: "http://localhost:3001/",
+    explorer: "http://localhost:7001/",
+    tools: {
+      forcedExit: "https://withdraw-goerli.zksync.dev/",
+      link: "https://checkout-goerli.zksync.io/",
+      withdrawal: "https://withdraw.zksync.io/",
+      mint: "https://mint-goerli.zksync.dev/",
+    },
+  },
 };
 
 export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConfig => {
@@ -52,6 +63,12 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
       name: "mainnet",
       explorer: "https://etherscan.io/",
       rpc_url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+    },
+    localrskregtest: {
+      id: 33,
+      name: "localrskregtest",
+      explorer: "http://localhost:7001/",
+      rpc_url: `http://localhost:4444`,
     },
   };
 };
