@@ -198,12 +198,12 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
         ],
         chains: Object.entries(getters.ethereumNetworksConfig as ZkEthereumNetworkConfig).map(([key, value]) => ({
           id: "0x" + value.id.toString(16),
-          token: "ETH",
+          token: "RBTC",
           label: key,
           rpcUrl: value.rpc_url,
         })),
         appMetadata: {
-          name: "zkSync",
+          name: "rifRollup",
           // eslint-disable-next-line quotes
           icon: `<svg width="237" height="237" viewBox="0 0 237 237" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M231.8 115.4L168.6 52.3V100.1L103.7 147.9H168.6V182.6L233.9 117.5L231.8 115.4Z" stroke="#4E5299" stroke-width="4.0312" stroke-miterlimit="10"/><path d="M68.7998 87.1001V52.3L3.2998 117.5L68.7998 182.6V135.4L133.7 87.1001H68.7998Z" stroke="#8B8CFB" stroke-width="4.0312" stroke-miterlimit="10"/></svg>`,
           logo: "https://firebasestorage.googleapis.com/v0/b/testing-30533.appspot.com/o/rif_logo_black.svg?alt=media&token=9adc702e-2e52-42db-a96d-55fdfeee4214",
