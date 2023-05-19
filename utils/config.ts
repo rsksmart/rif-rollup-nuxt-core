@@ -6,8 +6,8 @@ import { ModuleOptions, ZkEthereumNetworkConfig, ZkNetworkConfig, ZkConfig } fro
 export const zkSyncNetworkConfig: ZkNetworkConfig = {
   goerli: {
     ethereumNetwork: "goerli",
-    api: "https://goerli-api.zksync.io/api/v0.2/",
-    explorer: "https://goerli.zkscan.io/",
+    api: "http://localhost:3001/",
+    explorer: "http://localhost:7001/",
     tools: {
       forcedExit: "https://withdraw-goerli.zksync.dev/",
       link: "https://checkout-goerli.zksync.io/",
@@ -53,10 +53,10 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
 export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConfig => {
   return {
     goerli: {
-      id: 5,
+      id: 33,
       name: "goerli",
-      explorer: "https://goerli.etherscan.io/",
-      rpc_url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+      explorer: "http://localhost:7001/",
+      rpc_url: `http://localhost:4444/`,
     },
     mainnet: {
       id: 1,
