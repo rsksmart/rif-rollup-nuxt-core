@@ -60,7 +60,7 @@
     "nuxt": "^2.15.3",
     "ts-node": "^9.1.1",
     "web3": "^1.5.3",
-    "zksync": "^0.13.1"
+    "zksync": "/Users/sergiojara/Developer/iov/rif-rollup-zksync"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",

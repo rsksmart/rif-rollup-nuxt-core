@@ -1,7 +1,7 @@
 import { Address, Network, TokenSymbol, NFT, ChangePubKeyFee, LegacyChangePubKeyFee, TokenLike, PubKeyHash, ApiTransaction } from "zksync/build/types";
 import type { BigNumber, BigNumberish } from "ethers";
 
-export type Link = `https://${string}/`;
+export type Link = `https://${string}/` | `http://${string}/`;
 
 export type EthereumNetwork = "goerli" | "mainnet";
 
