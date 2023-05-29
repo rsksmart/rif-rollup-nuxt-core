@@ -3,7 +3,7 @@ import type { BigNumber, BigNumberish } from "ethers";
 
 export type Link = `https://${string}/`;
 
-export type EthereumNetwork = "goerli" | "mainnet";
+export type EthereumNetwork = "goerli" | "mainnet" | "localhost";
 
 export type TransactionType = "Withdraw" | "Transfer" | "FastWithdraw" | "MintNFT" | "WithdrawNFT" | "FastWithdrawNFT" | ChangePubKeyFee | LegacyChangePubKeyFee | "Swap";
 
