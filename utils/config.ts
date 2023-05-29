@@ -4,6 +4,17 @@ import { version as zkUIVersion } from "../package.json";
 import { ModuleOptions, ZkEthereumNetworkConfig, ZkNetworkConfig, ZkConfig } from "../types";
 
 export const zkSyncNetworkConfig: ZkNetworkConfig = {
+  localhost: {
+    ethereumNetwork: "localhost",
+    api: "https://localhost:3001/api/v0.2/",
+    explorer: "https://goerli.zkscan.io/",
+    tools: {
+      forcedExit: "https://withdraw-goerli.zksync.dev/",
+      link: "https://checkout-goerli.zksync.io/",
+      withdrawal: "https://withdraw.zksync.io/",
+      mint: "https://mint-goerli.zksync.dev/",
+    },
+  },
   goerli: {
     ethereumNetwork: "goerli",
     api: "https://goerli-api.zksync.io/api/v0.2/",
@@ -41,6 +52,12 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
 
 export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConfig => {
   return {
+    localhost: {
+      id: 33,
+      name: "localhost",
+      explorer: "https://localhost:7001/",
+      rpc_url: "http://localhost:4444",
+    },
     goerli: {
       id: 5,
       name: "goerli",
