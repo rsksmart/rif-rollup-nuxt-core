@@ -101,7 +101,7 @@ export const getters: GetterTree<TransactionState, TransactionState> = {
       case "Transfer":
         return "Send on zkSync";
       case "Deposit":
-        return "Top up";
+        return "Deposit";
       case "Withdraw":
         return "Send to Ethereum";
       case "Mint":
