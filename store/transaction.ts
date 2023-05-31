@@ -99,19 +99,19 @@ export const getters: GetterTree<TransactionState, TransactionState> = {
     }
     switch (state.type) {
       case "Transfer":
-        return "Send on zkSync";
+        return "Send on RIF Rollup";
       case "Deposit":
         return "Deposit";
       case "Withdraw":
-        return "Send to Ethereum";
+        return "Send to RSK";
       case "Mint":
         return "Mint";
       case "MintNFT":
         return "Mint NFT";
       case "TransferNFT":
-        return "Send NFT on zkSync";
+        return "Send NFT on RIF Rollup";
       case "WithdrawNFT":
-        return "Withdraw NFT to Ethereum";
+        return "Withdraw NFT to RSK";
       case "CPK":
         return "Activate account";
       case "WithdrawPending":
