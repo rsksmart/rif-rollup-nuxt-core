@@ -1,13 +1,13 @@
 import { Network } from "zksync/build/types";
-import { version as zkSyncLibVersion } from "zksync/package.json";
-import { version as zkUIVersion } from "../package.json";
 import { ModuleOptions, ZkEthereumNetworkConfig, ZkNetworkConfig, ZkConfig } from "../types";
 
+export const zkSyncLibVersion = "1.0.0";
+export const zkUIVersion = "1.0.0";
 export const zkSyncNetworkConfig: ZkNetworkConfig = {
   localhost: {
     ethereumNetwork: "localhost",
     api: "https://localhost:3001/api/v0.2/",
-    explorer: "https://goerli.zkscan.io/",
+    explorer: "https://localhost:7001/",
     tools: {
       forcedExit: "https://withdraw-goerli.zksync.dev/",
       link: "https://checkout-goerli.zksync.io/",

@@ -60,7 +60,7 @@
     "nuxt": "^2.15.3",
     "ts-node": "^9.1.1",
     "web3": "^1.5.3",
-    "zksync": "https://github.com/rsksmart/rif-rollup-js-sdk.git"
+    "zksync": "git+ssh://git@github.com:rsksmart/rif-rollup-js-sdk.git#feat/rebrand_sdk"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",

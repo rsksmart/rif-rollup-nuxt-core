@@ -103,7 +103,7 @@ export const getters: GetterTree<TransactionState, TransactionState> = {
       case "Deposit":
         return "Deposit";
       case "Withdraw":
-        return "Send to RSK";
+        return "Send to Rootstock";
       case "Mint":
         return "Mint";
       case "MintNFT":
@@ -111,7 +111,7 @@ export const getters: GetterTree<TransactionState, TransactionState> = {
       case "TransferNFT":
         return "Send NFT on RIF Rollup";
       case "WithdrawNFT":
-        return "Withdraw NFT to RSK";
+        return "Withdraw NFT to Rootstock";
       case "CPK":
         return "Activate account";
       case "WithdrawPending":
@@ -797,7 +797,7 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       commit("setNewActiveTransaction", "Deposit");
       commit("setActiveTransactionStep", "waitingForUserConfirmation");
       dispatch("zk-wallet/openWalletApp", undefined, { root: true });
-      const depositResponse = await syncWallet.depositToSyncFromEthereum({
+      const depositResponse = await syncWallet.depositToSyncFromRootstock({
         depositTo: getters.address,
         token: getters.symbol,
         amount: getters.amountBigNumber,
@@ -809,7 +809,7 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       commit("setActiveTransactionTxHash", depositResponse.ethTx.hash);
       commit("setActiveTransactionAmountToken", { token: getters.symbol, amount: getters.amountBigNumber.toString() });
       commit("setActiveTransactionStep", "committing");
-      await depositResponse.awaitEthereumTxCommit();
+      await depositResponse.awaitRootstockTxCommit();
       if (!getters.activeTransaction) {
         return;
       }
