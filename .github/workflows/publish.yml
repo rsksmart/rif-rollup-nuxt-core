@@ -1,10 +1,12 @@
-name: Release
+name: Deploy library on NPM
+
 on:
-  push:
+    release:
+        types: [created]
 
 jobs:
-  release:
-    name: Release
+  publish:
+    name: Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,9 +18,7 @@ jobs:
         with:
           node-version: 'lts/*'
       - name: Install dependencies
-        run: |
-          yarn set version 3.1.0
-          yarn install
+        run: yarn install
       - name: Run yarn test
         run: yarn test
       - name: Release
