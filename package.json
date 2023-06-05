@@ -4,22 +4,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matter-labs/zksync-nuxt-core.git"
+    "url": "git+https://github.com/rsksmart/rif-rollup-nuxt-core.git"
   },
   "bugs": {
-    "url": "https://github.com/matter-labs/zksync-nuxt-core/issues"
+    "url": "https://github.com/rsksmart/rif-rollup-nuxt-core/issues"
   },
-  "homepage": "https://github.com/matter-labs/zksync-nuxt-core",
+  "homepage": "https://github.com/rsksmart/rif-rollup-nuxt-core",
   "author": {
-    "name": "Matter Labs",
-    "url": "https://matter-labs.io"
+    "name": "Rootstock",
+    "url": "https://rootstock.io"
   },
-  "contributors": [
-    {
-      "name": "JackHamer",
-      "url": "https://github.com/JackHamer09"
-    }
-  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -60,7 +54,7 @@
     "nuxt": "^2.15.3",
     "ts-node": "^9.1.1",
     "web3": "^1.5.3",
-    "zksync": "git+ssh://git@github.com:rsksmart/rif-rollup-js-sdk.git"
+    "zksync": "git+https://github.com/rsksmart/rif-rollup-js-sdk.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
