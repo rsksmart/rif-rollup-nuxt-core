@@ -8,15 +8,15 @@
 
 ## Setup
 
-1. Add `@matterlabs/zksync-nuxt-core` dependency to your project
+1. Add `@rsksmart/rif-rollup-nuxt-core` dependency to your project
 
 ```bash
-yarn add @matterlabs/zksync-nuxt-core
+yarn add @rsksmart/rif-rollup-nuxt-core
 # or
-npm install @matterlabs/zksync-nuxt-core
+npm install @rsksmart/rif-rollup-nuxt-core
 ```
 
-2. Add `@matterlabs/zksync-nuxt-core` to the `buildModules` section of `nuxt.config.js`
+2. Add `@rsksmart/rif-rollup-nuxt-core` to the `buildModules` section of `nuxt.config.js`
 
 #### JS[types](types)
 [tailwind.config.js](tailwind.config.js)
@@ -77,7 +77,7 @@ import { ModuleOptions } from "matter-dapp-ui/types";
 1. Clone this repository
 2. Go to the package and [link](https://classic.yarnpkg.com/en/docs/cli/link/) it with `yarn link`
 3. Go to your nuxt project where you want to use the module
-4. Install link dependency with `yarn link @matterlabs/zksync-nuxt-core`
+4. Install link dependency with `yarn link @rsksmart/rif-rollup-nuxt-core`
 5. Import the module into your project as shown [above](#setup)
 6. Done ✅
 
@@ -87,9 +87,9 @@ import { ModuleOptions } from "matter-dapp-ui/types";
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@matterlabs/zksync-nuxt-core/latest.svg
-[npm-version-href]: https://npmjs.com/package/@matterlabs/zksync-nuxt-core
-[npm-downloads-src]: https://img.shields.io/npm/dm/@matterlabs/zksync-nuxt-core.svg
-[npm-downloads-href]: https://npmjs.com/package/@matterlabs/zksync-nuxt-core
-[license-src]: https://img.shields.io/npm/l/@matterlabs/zksync-nuxt-core.svg
-[license-href]: https://npmjs.com/package/@matterlabs/zksync-nuxt-core
+[npm-version-src]: https://img.shields.io/npm/v/@rsksmart/rif-rollup-nuxt-core/latest.svg
+[npm-version-href]: https://npmjs.com/package/@rsksmart/rif-rollup-nuxt-core
+[npm-downloads-src]: https://img.shields.io/npm/dm/@rsksmart/rif-rollup-nuxt-core.svg
+[npm-downloads-href]: https://npmjs.com/package/@rsksmart/rif-rollup-nuxt-core
+[license-src]: https://img.shields.io/npm/l/@rsksmart/rif-rollup-nuxt-core.svg
+[license-href]: https://npmjs.com/package/@rsksmart/rif-rollup-nuxt-core
