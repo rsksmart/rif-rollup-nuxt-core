@@ -31,6 +31,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "@rsksmart/rif-rollup-js-sdk": "^0.13.1-alpha",
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3-onboard/coinbase": "^2.2.0",
     "@web3-onboard/core": "^2.16.2",
@@ -53,8 +54,7 @@
     "multiformats": "^9.4.7",
     "nuxt": "^2.15.3",
     "ts-node": "^9.1.1",
-    "web3": "^1.5.3",
-    "zksync": "git+https://github.com/rsksmart/rif-rollup-js-sdk.git"
+    "web3": "^1.5.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",

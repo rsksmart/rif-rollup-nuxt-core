@@ -2,9 +2,9 @@
 import { BigNumber, Contract } from "ethers";
 import type { BigNumberish } from "ethers";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { TokenSymbol, Address, TokenLike, NFTInfo, AccountState as WalletAccountState } from "zksync/build/types";
-import { BatchBuilder } from "zksync/build/batch-builder";
-import { submitSignedTransactionsBatch, closestPackableTransactionAmount, Transaction, Wallet, RemoteWallet, utils as zkSyncUtils } from "zksync";
+import { TokenSymbol, Address, TokenLike, NFTInfo, AccountState as WalletAccountState } from "@rsksmart/rif-rollup-js-sdk/build/types";
+import { BatchBuilder } from "@rsksmart/rif-rollup-js-sdk/build/batch-builder";
+import { submitSignedTransactionsBatch, closestPackableTransactionAmount, Transaction, Wallet, RemoteWallet, utils as zkSyncUtils } from "@rsksmart/rif-rollup-js-sdk";
 import {
   ModuleOptions,
   DecimalBalance,

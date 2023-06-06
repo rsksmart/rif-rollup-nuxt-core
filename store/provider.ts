@@ -2,8 +2,8 @@
 // @ts-ignore
 import cache from "js-cache";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { getDefaultRestProvider, RestProvider } from "zksync";
-import { Network } from "zksync/build/types";
+import { getDefaultRestProvider, RestProvider } from "@rsksmart/rif-rollup-js-sdk";
+import { Network } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { ModuleOptions, ZkEthereumNetworkName } from "../types";
 
 let providerPromise: Promise<RestProvider> | undefined;

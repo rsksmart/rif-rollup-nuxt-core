@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { Context } from "@nuxt/types";
-import { TokenSymbol } from "zksync/build/types";
+import { TokenSymbol } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import type { BigNumberish } from "ethers";
 import { parseDecimal, parseBigNumberish, formattedPrice, formatBigNumLimited } from "../utils";
 import { DecimalBalance } from "../types";

@@ -1,7 +1,7 @@
 /* eslint-disable require-await */
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { Address, AccountState as WalletAccountState, Tokens, AccountState } from "zksync/build/types";
-import { Wallet, RemoteWallet } from "zksync";
+import { Address, AccountState as WalletAccountState, Tokens, AccountState } from "@rsksmart/rif-rollup-js-sdk/build/types";
+import { Wallet, RemoteWallet } from "@rsksmart/rif-rollup-js-sdk";
 import { ModuleOptions } from "../types";
 
 let accountStatePromise: Promise<WalletAccountState> | undefined;

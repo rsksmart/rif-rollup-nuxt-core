@@ -20,9 +20,9 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 
 import { ethers } from "ethers";
 import type { JsonRpcError } from "json-rpc-engine";
-import { Wallet, RemoteWallet, RestProvider } from "zksync";
+import { Wallet, RemoteWallet, RestProvider } from "@rsksmart/rif-rollup-js-sdk";
 import type { ExternalProvider } from "@ethersproject/providers";
-import { Address } from "zksync/build/types";
+import { Address } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { config, ethereumNetworkConfig, zkSyncNetworkConfig } from "../utils/config";
 import { ModuleOptions, ZkOnboardStatus, ZkLoginOptions, ZkEthereumNetwork, ZkEthereumNetworkConfig, ZkConfig } from "../types";
 import { isMobileDevice } from "../utils";

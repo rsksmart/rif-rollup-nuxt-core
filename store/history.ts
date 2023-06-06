@@ -2,8 +2,8 @@
 // @ts-ignore
 import cache from "js-cache";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { Address, ApiTransaction, TokenSymbol } from "zksync/build/types";
-import { RestProvider } from "zksync";
+import { Address, ApiTransaction, TokenSymbol } from "@rsksmart/rif-rollup-js-sdk/build/types";
+import { RestProvider } from "@rsksmart/rif-rollup-js-sdk";
 import { ModuleOptions, ZkTransactionHistoryLoadingState, ZkWithdrawalEthTxs, ZkFilteredTransactionHistory } from "../types";
 
 const withdrawalEthTxPromise: {

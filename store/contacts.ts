@@ -1,7 +1,7 @@
 /* eslint-disable require-await */
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
 import { getAddress } from "ethers/lib/utils";
-import { Address } from "zksync/build/types";
+import { Address } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { ModuleOptions, ZkContacts, ZkContact } from "../types";
 
 const nameLocalStoragePrefix = "customAddressName-";

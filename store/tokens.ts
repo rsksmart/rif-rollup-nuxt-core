@@ -3,8 +3,8 @@
 import cache from "js-cache";
 // eslint-disable-next-line import/named
 import { GetterTree, MutationTree, ActionTree } from "vuex";
-import { RestProvider } from "zksync";
-import { NFTInfo, Tokens, TokenSymbol } from "zksync/build/types";
+import { RestProvider } from "@rsksmart/rif-rollup-js-sdk";
+import { NFTInfo, Tokens, TokenSymbol } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { ModuleOptions, ZkTokenPrices } from "../types";
 
 let zkTokensPromise: Promise<Tokens>;
