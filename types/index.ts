@@ -1,4 +1,4 @@
-import { Address, Network, TokenSymbol, NFT, ChangePubKeyFee, LegacyChangePubKeyFee, TokenLike, PubKeyHash, ApiTransaction } from "zksync/build/types";
+import { Address, Network, TokenSymbol, NFT, ChangePubKeyFee, LegacyChangePubKeyFee, TokenLike, PubKeyHash, ApiTransaction } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import type { BigNumber, BigNumberish } from "ethers";
 
 export type Link = `https://${string}/`;

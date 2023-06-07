@@ -3,8 +3,8 @@
 import cache from "js-cache";
 import { BigNumber } from "ethers";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { closestPackableTransactionFee, RestProvider } from "zksync";
-import { TokenSymbol } from "zksync/build/types";
+import { closestPackableTransactionFee, RestProvider } from "@rsksmart/rif-rollup-js-sdk";
+import { TokenSymbol } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { ModuleOptions, ZkFeeParams, ZkFeeTransactionParams, ZkTransferBatchItem } from "../types";
 
 export type FeesState = {};

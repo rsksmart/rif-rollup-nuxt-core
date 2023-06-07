@@ -4897,6 +4897,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rsksmart/rif-rollup-js-sdk@npm:^0.13.1-alpha":
+  version: 0.13.1-alpha
+  resolution: "@rsksmart/rif-rollup-js-sdk@npm:0.13.1-alpha"
+  dependencies:
+    axios: ^0.21.2
+    websocket: ^1.0.30
+    websocket-as-promised: ^1.1.0
+    zksync-crypto: ^0.6.1
+  peerDependencies:
+    "@ethersproject/logger": ^5.4.0
+    ethers: ^5.4.4
+  checksum: a253124e0a91a50c29c9401047091f68c1bdbe2a07cb4f12159b409152f021fe49ca3f0179a39e39ae94d06488fb78735c813b98f29a609dda46d6df4a8f1883
+  languageName: node
+  linkType: hard
+
 "@rsksmart/rif-rollup-nuxt-core@workspace:.":
   version: 0.0.0-use.local
   resolution: "@rsksmart/rif-rollup-nuxt-core@workspace:."
@@ -4910,6 +4925,7 @@ __metadata:
     "@nuxtjs/eslint-module": ^3.0.2
     "@nuxtjs/stylelint-module": ^4.0.0
     "@nuxtjs/tailwindcss": ^4.0.1
+    "@rsksmart/rif-rollup-js-sdk": ^0.13.1-alpha
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/commit-analyzer": ^9.0.1
     "@semantic-release/git": ^10.0.1
@@ -4963,7 +4979,6 @@ __metadata:
     ts-node: ^9.1.1
     vue-jest: ^3.0.4
     web3: ^1.5.3
-    zksync: "git+https://github.com/rsksmart/rif-rollup-js-sdk.git"
   languageName: unknown
   linkType: soft
 
@@ -28125,21 +28140,6 @@ __metadata:
   version: 0.6.2
   resolution: "zksync-crypto@npm:0.6.2"
   checksum: b02b4ffb76cb7ac95b57935e0f9e09b06af6ae76b5ff80d3306707867e883cdbcaa41fb6222e1da71ce5edc096d0a783139fec297ceb62a95442812f0ac45940
-  languageName: node
-  linkType: hard
-
-"zksync@git+https://github.com/rsksmart/rif-rollup-js-sdk.git":
-  version: 0.0.2
-  resolution: "zksync@https://github.com/rsksmart/rif-rollup-js-sdk.git#commit=2139c56ba9d8b9991cf14d193e06e6b5e73a0b15"
-  dependencies:
-    axios: ^0.21.2
-    websocket: ^1.0.30
-    websocket-as-promised: ^1.1.0
-    zksync-crypto: ^0.6.1
-  peerDependencies:
-    "@ethersproject/logger": ^5.4.0
-    ethers: ^5.4.4
-  checksum: 12edfb033b1a52f984ae16889e3e2bab7d565577a445fab5daf766e5fc218942742fbff357c96f7b937351a1e83aa02ff97689049161fd32d9705cd7e015b9f2
   languageName: node
   linkType: hard
 

@@ -5,9 +5,9 @@ import cache from "js-cache";
 import { BigNumber, Contract } from "ethers";
 import type { BigNumberish, ContractInterface } from "ethers";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
-import { RestProvider, Wallet, RemoteWallet } from "zksync";
-import { AccountState as WalletAccountState, Tokens, TokenSymbol } from "zksync/build/types";
-import { ERC20_APPROVE_TRESHOLD, IERC20_INTERFACE, getPendingBalance } from "zksync/build/utils";
+import { RestProvider, Wallet, RemoteWallet } from "@rsksmart/rif-rollup-js-sdk";
+import { AccountState as WalletAccountState, Tokens, TokenSymbol } from "@rsksmart/rif-rollup-js-sdk/build/types";
+import { ERC20_APPROVE_TRESHOLD, IERC20_INTERFACE, getPendingBalance } from "@rsksmart/rif-rollup-js-sdk/build/utils";
 import { ModuleOptions, ZkInNFT, ZkTokenBalances, ZkEthereumBalances } from "../types";
 
 let ethereumBalancePromises: { [symbol: string]: Promise<BigNumber> } = {};

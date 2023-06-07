@@ -1,4 +1,4 @@
-import { Network } from "zksync/build/types";
+import { Network } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { ModuleOptions, ZkEthereumNetworkConfig, ZkNetworkConfig, ZkConfig } from "../types";
 
 export const zkSyncLibVersion = "1.0.0";

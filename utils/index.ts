@@ -3,8 +3,8 @@ import type { BigNumberish } from "ethers";
 import { isAddress } from "ethers/lib/utils";
 import { CID } from "multiformats/cid";
 import { base58btc } from "multiformats/bases/base58";
-import { RestProvider } from "zksync";
-import { Address, TokenLike } from "zksync/build/types";
+import { RestProvider } from "@rsksmart/rif-rollup-js-sdk";
+import { Address, TokenLike } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import { DecimalBalance } from "../types";
 
 export function parseDecimal(provider: RestProvider, symbol: TokenLike, amount: DecimalBalance) {
