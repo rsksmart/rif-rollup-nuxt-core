@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "zksync-nuxt-core",
+    title: "rif-rollup-nuxt-core",
     htmlAttrs: {
       lang: "en",
     },
