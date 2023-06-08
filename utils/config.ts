@@ -6,8 +6,8 @@ export const zkUIVersion = "1.0.0";
 export const zkSyncNetworkConfig: ZkNetworkConfig = {
   localhost: {
     ethereumNetwork: "localhost",
-    api: "https://localhost:3001/api/v0.2/",
-    explorer: "https://localhost:7001/",
+    api: "http://localhost:3001/api/v0.2/",
+    explorer: "http://localhost:7001/",
     tools: {
       forcedExit: "https://withdraw-goerli.zksync.dev/",
       link: "https://checkout-goerli.zksync.io/",
@@ -15,21 +15,10 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
       mint: "https://mint-goerli.zksync.dev/",
     },
   },
-  goerli: {
-    ethereumNetwork: "goerli",
-    api: "https://goerli-api.zksync.io/api/v0.2/",
-    explorer: "https://goerli.zkscan.io/",
-    tools: {
-      forcedExit: "https://withdraw-goerli.zksync.dev/",
-      link: "https://checkout-goerli.zksync.io/",
-      withdrawal: "https://withdraw.zksync.io/",
-      mint: "https://mint-goerli.zksync.dev/",
-    },
-  },
-  "goerli-beta": {
-    ethereumNetwork: "goerli",
-    api: "https://goerli-beta-api.zksync.dev/api/v0.2/",
-    explorer: "https://goerli-beta-scan.zksync.dev/",
+  testnet: {
+    ethereumNetwork: "testnet",
+    api: "http://127.0.0.1:3001/api/v0.2/",
+    explorer: "http://localhost:7001/",
     tools: {
       forcedExit: "https://withdraw-goerli.zksync.dev/",
       link: "https://checkout-goerli.zksync.io/",
@@ -58,17 +47,17 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
       explorer: "https://localhost:7001/",
       rpc_url: "http://localhost:4444",
     },
-    goerli: {
-      id: 5,
-      name: "goerli",
-      explorer: "https://goerli.etherscan.io/",
-      rpc_url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+    testnet: {
+      id: 31,
+      name: "testnet",
+      explorer: "https://explorer.testnet.rsk.co/",
+      rpc_url: "https://public-node.testnet.rsk.co",
     },
     mainnet: {
-      id: 1,
+      id: 30,
       name: "mainnet",
-      explorer: "https://etherscan.io/",
-      rpc_url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+      explorer: "https://explorer.rsk.co/",
+      rpc_url: "https://public-node.rsk.co",
     },
   };
 };

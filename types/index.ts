@@ -1,9 +1,9 @@
 import { Address, Network, TokenSymbol, NFT, ChangePubKeyFee, LegacyChangePubKeyFee, TokenLike, PubKeyHash, ApiTransaction } from "@rsksmart/rif-rollup-js-sdk/build/types";
 import type { BigNumber, BigNumberish } from "ethers";
 
-export type Link = `https://${string}/`;
+export type Link = `https://${string}/` | `http://${string}/`;
 
-export type EthereumNetwork = "goerli" | "mainnet" | "localhost";
+export type EthereumNetwork = "testnet" | "mainnet" | "localhost";
 
 export type TransactionType = "Withdraw" | "Transfer" | "FastWithdraw" | "MintNFT" | "WithdrawNFT" | "FastWithdrawNFT" | ChangePubKeyFee | LegacyChangePubKeyFee | "Swap";
 
