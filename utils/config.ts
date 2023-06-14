@@ -9,10 +9,10 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
     api: "http://localhost:3001/api/v0.2/",
     explorer: "http://localhost:7001/",
     tools: {
-      forcedExit: "http://localhost:3001/",
+      forcedExit: "http://localhost:3000/",
       link: "http://localhost:3000/",
-      withdrawal: "http://localhost:3001/",
-      mint: "http://localhost:3001/",
+      withdrawal: "http://localhost:3000/",
+      mint: "http://localhost:3000/",
     },
   },
   testnet: {
