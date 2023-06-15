@@ -18,12 +18,12 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   testnet: {
     ethereumNetwork: "testnet",
     api: "https://dev.aggregation.rifcomputing.net:3029/api/v0.2/",
-    explorer: "https://explorer.dev.aggregation.rifcomputing.net/",
+    explorer: "http://localhost:7001/", // https://explorer.dev.aggregation.rifcomputing.net/
     tools: {
-      forcedExit: "https://wallet.dev.aggregation.rifcomputing.net/withdraw/",
+      forcedExit: "http://localhost:3000/transaction/withdraw/", // https://wallet.dev.aggregation.rifcomputing.net/
       link: "https://checkout.dev.aggregation.rifcomputing.net/",
-      withdrawal: "https://wallet.dev.aggregation.rifcomputing.net/withdraw/",
-      mint: "https://wallet.dev.aggregation.rifcomputing.net/mint/",
+      withdrawal: "http://localhost:3000/transaction/withdraw/",
+      mint: "http://localhost:3000/transaction/deposit/",
     },
   },
   mainnet: {
