@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsksmart/rif-rollup-nuxt-core.git"
+    "url": "git+https://github.com/rsksmart/rif-rollup-nuxt-core.git/"
   },
   "bugs": {
     "url": "https://github.com/rsksmart/rif-rollup-nuxt-core/issues"
