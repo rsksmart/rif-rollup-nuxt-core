@@ -112,7 +112,7 @@ export const actions: ActionTree<TokensState, TokensState> = {
     if (!getters.zkTokens || getters.zkTokensLoading) {
       await dispatch("loadZkTokens");
     }
-    if (symbol === "ETH") {
+    if (symbol === "RBTC") {
       return true;
     }
     const tokens = getters.zkTokens;

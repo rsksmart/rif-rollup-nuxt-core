@@ -36,7 +36,7 @@ export const state = (_: ModuleOptions): BalancesState => ({
   ethereumBalanceLoading: {},
   ethereumBalancesRequested: false,
   tokensAllowance: {
-    ETH: ERC20_APPROVE_TRESHOLD,
+    RBTC: ERC20_APPROVE_TRESHOLD,
   },
   tokensAllowanceLoading: {},
   tokensAllowanceForceUpdate: Number.MIN_SAFE_INTEGER,
@@ -148,7 +148,7 @@ export const mutations: MutationTree<BalancesState> = {
     state.ethereumBalanceLoading = {};
     state.ethereumBalancesRequested = false;
     state.tokensAllowance = {
-      ETH: ERC20_APPROVE_TRESHOLD,
+      RBTC: ERC20_APPROVE_TRESHOLD,
     };
     state.tokensAllowanceLoading = {};
     state.pendingBalance = {};
@@ -201,7 +201,7 @@ export const actions: ActionTree<BalancesState, BalancesState> = {
   },
   async requestAllowance({ commit, rootGetters, getters }, { force = false, symbol }: { force?: boolean; symbol: TokenSymbol }): Promise<BigNumber> {
     if (!rootGetters["zk-account/loggedIn"]) return BigNumber.from("0");
-    if (symbol === "ETH") {
+    if (symbol === "RBTC") {
       return ERC20_APPROVE_TRESHOLD;
     }
     const allowanceCacheKey = `${allowanceCachePrefix}${symbol}`;

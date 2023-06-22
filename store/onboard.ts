@@ -339,12 +339,12 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
                       chainName: network.name.charAt(0).toUpperCase() + network.name.slice(1),
                       nativeCurrency: {
                         name: "Ether",
-                        symbol: "ETH",
+                        symbol: "RBTC",
                         decimals: 18,
                       },
                       rpcUrls: [network.rpc_url],
                       blockExplorerUrls: [network.rpc_url],
-                      iconUrls: ["https://ethereum.org/favicon-32x32.png"],
+                      iconUrls: ["https://rootstock.io/favicon-32x32.png"],
                     },
                   ],
                 })
