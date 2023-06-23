@@ -815,11 +815,11 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       }
       commit("setActiveTransactionStep", "updating");
       const dataPromises = [
-        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "ETH" }, { root: true }),
+        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "RBTC" }, { root: true }),
         dispatch("zk-account/updateAccountState", true, { root: true }),
         dispatch("zk-history/getNewTransactionHistory", true, { root: true }),
       ];
-      if (getters.symbol !== "ETH") {
+      if (getters.symbol !== "RBTC") {
         dataPromises.push(dispatch("zk-balances/requestAllowance", { force: true, symbol: getters.symbol }, { root: true }));
         dataPromises.push(dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: getters.symbol }, { root: true }));
       }
@@ -861,7 +861,7 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       commit("setActiveTransactionStep", "updating");
       await Promise.all([
         dispatch("zk-balances/requestAllowance", { force: true, symbol: getters.symbol }, { root: true }),
-        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "ETH" }, { root: true }),
+        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "RBTC" }, { root: true }),
       ]);
       if (!getters.activeTransaction) {
         return;
@@ -961,11 +961,11 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       commit("setActiveTransactionStep", "updating");
       const dataPromises = [
         dispatch("zk-balances/requestPendingBalance", { force: true, symbol: getters.symbol }, { root: true }),
-        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "ETH" }, { root: true }),
+        dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "RBTC" }, { root: true }),
         dispatch("zk-account/updateAccountState", true, { root: true }),
         dispatch("zk-history/getNewTransactionHistory", true, { root: true }),
       ];
-      if (getters.symbol !== "ETH") {
+      if (getters.symbol !== "RBTC") {
         dataPromises.push(dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: getters.symbol }, { root: true }));
       }
       await Promise.all(dataPromises);
