@@ -32,6 +32,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "@rsksmart/rif-rollup-js-sdk": "^0.13.4-alpha",
+    "@rsksmart/rlogin": "^1.5.0-beta.1",
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3-onboard/coinbase": "^2.2.0",
     "@web3-onboard/core": "^2.16.2",
