@@ -14,7 +14,7 @@ import injectedModule from "@web3-onboard/injected-wallets";
 // import ledgerModule from "@web3-onboard/ledger";
 // import trezorModule from "@web3-onboard/trezor";
 // import dcentModule from "@web3-onboard/dcent";
-// import walletConnectModule from "@web3-onboard/walletconnect";
+import walletConnectModule from "@web3-onboard/walletconnect";
 import type { IConnector } from "@walletconnect/types";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
@@ -181,7 +181,13 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
         theme: state.onboardTheme,
         wallets: [
           injectedModule(),
-          // walletConnectModule(),
+          walletConnectModule({
+            version: 2,
+            projectId: "9281428a1ef192e1d6518c64c8107dc2",
+            qrModalOptions: {
+              themeMode: state.onboardTheme,
+            },
+          }),
           // ledgerModule(),
           // trezorModule({
           //   email: "support@zksync.io",
@@ -320,7 +326,7 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
                 return reject(new Error("Unable to switch network"));
               }
 
-              if ((switchError as JsonRpcError<unknown>).code !== 4902 && (switchError as any).data?.originalError?.code !== 4902) {
+              if ((switchError as JsonRpcError).code !== 4902 && (switchError as any).data?.originalError?.code !== 4902) {
                 return reject(switchError);
               }
 
