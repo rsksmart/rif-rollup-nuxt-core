@@ -181,13 +181,7 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
         theme: state.onboardTheme,
         wallets: [
           injectedModule(),
-          walletConnectModule({
-            version: 2,
-            projectId: "9281428a1ef192e1d6518c64c8107dc2",
-            qrModalOptions: {
-              themeMode: state.onboardTheme,
-            },
-          }),
+          walletConnectModule(),
           // ledgerModule(),
           // trezorModule({
           //   email: "support@zksync.io",
