@@ -1,8 +1,8 @@
 function getUserTheme(): "dark" | "light" {
-  if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-    return "dark";
-  } else {
+  if (localStorage.getItem("theme") === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
     return "light";
+  } else {
+    return "dark";
   }
 }
 
