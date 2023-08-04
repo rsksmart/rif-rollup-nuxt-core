@@ -149,7 +149,7 @@ export type ZkTransferBatchItem = {
 
 export type ZkNetwork = {
   ethereumNetwork: EthereumNetwork;
-  explorer: Link;
+  rollupExplorer: Link;
   api: Link;
   tools: {
     forcedExit: Link;
@@ -166,7 +166,7 @@ export type ZkNetworkConfig = {
 export type ZkEthereumNetwork = {
   id: number;
   name: EthereumNetwork;
-  explorer: Link;
+  rskExplorer: Link;
   rpc_url: string;
 };
 
