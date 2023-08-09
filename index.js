@@ -12,6 +12,7 @@ export default function (moduleOptions) {
         PORTIS_KEY: undefined,
         INFURA_KEY: undefined,
       },
+      rollupServerURLs: undefined,
       /* onboardConfig: {
         APP_NAME: undefined,
         APP_ID: undefined,

@@ -64,6 +64,11 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
 
 export const config = (network: Network, config: ModuleOptions): ZkConfig => {
   const zkSyncNetwork = zkSyncNetworkConfig[network];
+    //override values if necessary
+  if (config.rollupServerURLs?.[network]) {
+    zkSyncNetwork.api = config.rollupServerURLs[network];
+  }
+
   const ethereumNetwork = ethereumNetworkConfig(config.apiKeys.INFURA_KEY)[zkSyncNetwork.ethereumNetwork];
   return {
     zkSyncLibVersion,

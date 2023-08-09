@@ -4,7 +4,7 @@ import cache from "js-cache";
 import type { GetterTree, MutationTree, ActionTree } from "vuex";
 import { getDefaultRestProvider, RestProvider } from "@rsksmart/rif-rollup-js-sdk";
 import { Network } from "@rsksmart/rif-rollup-js-sdk/build/types";
-import { ModuleOptions, ZkEthereumNetworkName } from "../types";
+import { ModuleOptions, RollupServerURLs, ZkEthereumNetworkName } from "../types";
 
 let providerPromise: Promise<RestProvider> | undefined;
 let syncProvider: RestProvider | undefined;
@@ -13,12 +13,14 @@ export type ProviderState = {
   network: Network;
   providerRequestingError: string | undefined;
   forceUpdateValue: number;
+  rollupServerURLs?: RollupServerURLs;
 };
 
 export const state = (options: ModuleOptions): ProviderState => ({
   network: options.network!,
   providerRequestingError: undefined,
   forceUpdateValue: Number.MIN_SAFE_INTEGER,
+  rollupServerURLs: options.rollupServerURLs,
 });
 
 export const getters: GetterTree<ProviderState, ProviderState> = {
@@ -29,6 +31,7 @@ export const getters: GetterTree<ProviderState, ProviderState> = {
     state.forceUpdateValue;
     return syncProvider;
   },
+  rollupServerURLs: (state) => state.rollupServerURLs,
 };
 
 export const mutations: MutationTree<ProviderState> = {
@@ -45,7 +48,7 @@ export const actions: ActionTree<ProviderState, ProviderState> = {
   async requestProvider({ getters, commit }, force = false) {
     try {
       if (!syncProvider || force) {
-        providerPromise = getDefaultRestProvider(getters.network);
+        providerPromise = getDefaultRestProvider(getters.network, undefined, getters.rollupServerURLs);
       }
       const newSyncProvider = await providerPromise;
       commit("setSyncProvider", newSyncProvider);
