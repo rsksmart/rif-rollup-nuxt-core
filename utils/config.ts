@@ -7,7 +7,7 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   localhost: {
     ethereumNetwork: "localhost",
     api: "http://localhost:3001/api/v0.2/",
-    explorer: "http://localhost:7001/",
+    rollupExplorer: "http://localhost:7000/",
     tools: {
       forcedExit: "http://localhost:3000/",
       link: "http://localhost:3000/",
@@ -18,7 +18,7 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   testnet: {
     ethereumNetwork: "testnet",
     api: "https://dev.aggregation.rifcomputing.net:3029/api/v0.2/",
-    explorer: "https://explorer.dev.aggregation.rifcomputing.net/",
+    rollupExplorer: "https://explorer.dev.aggregation.rifcomputing.net/",
     tools: {
       forcedExit: "https://wallet.dev.aggregation.rifcomputing.net/transaction/withdraw/",
       link: "https://checkout.dev.aggregation.rifcomputing.net/",
@@ -29,7 +29,7 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   mainnet: {
     ethereumNetwork: "mainnet",
     api: "https://api.zksync.io/api/v0.2/",
-    explorer: "https://zkscan.io/",
+    rollupExplorer: "https://zkscan.io/",
     tools: {
       forcedExit: "https://withdraw.zksync.dev/",
       link: "https://checkout.zksync.io/",
@@ -44,19 +44,19 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
     localhost: {
       id: 33,
       name: "localhost",
-      explorer: "https://localhost:7001/",
+      rskExplorer: "http://not.Available.In.LocalHost/",
       rpc_url: "http://localhost:4444",
     },
     testnet: {
       id: 31,
       name: "testnet",
-      explorer: "https://explorer.testnet.rsk.co/",
+      rskExplorer: "https://explorer.testnet.rsk.co/",
       rpc_url: "https://public-node.testnet.rsk.co",
     },
     mainnet: {
       id: 30,
       name: "mainnet",
-      explorer: "https://explorer.rsk.co/",
+      rskExplorer: "https://explorer.rsk.co/",
       rpc_url: "https://public-node.rsk.co",
     },
   };
@@ -64,6 +64,11 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
 
 export const config = (network: Network, config: ModuleOptions): ZkConfig => {
   const zkSyncNetwork = zkSyncNetworkConfig[network];
+    //override values if necessary
+  if (config.rollupServerURLs?.[network]) {
+    zkSyncNetwork.api = config.rollupServerURLs[network];
+  }
+
   const ethereumNetwork = ethereumNetworkConfig(config.apiKeys.INFURA_KEY)[zkSyncNetwork.ethereumNetwork];
   return {
     zkSyncLibVersion,

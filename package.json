@@ -1,6 +1,6 @@
 {
   "name": "@rsksmart/rif-rollup-nuxt-core",
-  "version": "1.1.4",
+  "version": "1.1.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "@rsksmart/rif-rollup-js-sdk": "^0.13.4-alpha",
+    "@rsksmart/rif-rollup-js-sdk": "^0.13.6-alpha",
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3-onboard/coinbase": "^2.2.0",
     "@web3-onboard/core": "^2.16.2",
@@ -90,7 +90,7 @@
     "sass": "^1.32.12",
     "sass-loader": "10",
     "semantic-release": "^18.0.0",
-    "stylelint": "^13.12.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
     "ts-jest": "^26.5.4",

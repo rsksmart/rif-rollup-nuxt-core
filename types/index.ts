@@ -31,6 +31,8 @@ export type ZkOnboardConfig = {
   APP_ID: string;
 };
 
+export type RollupServerURLs = Record<Network, Link>
+
 export type ModuleOptions = {
   network?: Network;
   ipfsGateway?: string;
@@ -38,6 +40,7 @@ export type ModuleOptions = {
   disabledWallets?: { name: string; error: string }[];
   logoutRedirect?: false | string;
   restoreNetwork?: boolean;
+  rollupServerURLs?: RollupServerURLs;
 };
 
 export type ZkTransactionType =
@@ -149,7 +152,7 @@ export type ZkTransferBatchItem = {
 
 export type ZkNetwork = {
   ethereumNetwork: EthereumNetwork;
-  explorer: Link;
+  rollupExplorer: Link;
   api: Link;
   tools: {
     forcedExit: Link;
@@ -166,7 +169,7 @@ export type ZkNetworkConfig = {
 export type ZkEthereumNetwork = {
   id: number;
   name: EthereumNetwork;
-  explorer: Link;
+  rskExplorer: Link;
   rpc_url: string;
 };
 
