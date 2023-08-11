@@ -1,8 +1,8 @@
 function getUserTheme(): "dark" | "light" {
-  if (localStorage.getItem("theme") === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-    return "light";
-  } else {
+  if (localStorage.getItem("theme") === "dark") {
     return "dark";
+  } else {
+    return "light";
   }
 }
 
@@ -13,13 +13,13 @@ function setTheme(theme: "dark" | "light") {
 }
 
 function toggleTheme() {
-  let newTheme: "dark" | "light" = "dark";
-  if (getUserTheme() === "dark") {
-    setTheme("light");
-    newTheme = "light";
-  } else {
+  let newTheme: "dark" | "light" = "light";
+  if (getUserTheme() === "light") {
     setTheme("dark");
     newTheme = "dark";
+  } else {
+    setTheme("light");
+    newTheme = "light";
   }
   saveUserTheme(newTheme);
   return newTheme;
