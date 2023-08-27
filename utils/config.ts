@@ -18,7 +18,7 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   testnet: {
     ethereumNetwork: "testnet",
     api: "https://dev.aggregation.rifcomputing.net:3029/api/v0.2/",
-    rollupExplorer: "https://explorer.dev.aggregation.rifcomputing.net/",
+    rollupExplorer: "https://explorer.testnet.rollup.rif.technology/",
     tools: {
       forcedExit: "https://wallet.dev.aggregation.rifcomputing.net/transaction/withdraw/",
       link: "https://checkout.dev.aggregation.rifcomputing.net/",
@@ -29,7 +29,7 @@ export const zkSyncNetworkConfig: ZkNetworkConfig = {
   mainnet: {
     ethereumNetwork: "mainnet",
     api: "https://api.zksync.io/api/v0.2/",
-    rollupExplorer: "https://zkscan.io/",
+    rollupExplorer: "https://explorer.rollup.rif.technology/",
     tools: {
       forcedExit: "https://withdraw.zksync.dev/",
       link: "https://checkout.zksync.io/",
