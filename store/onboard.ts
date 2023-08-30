@@ -4,16 +4,6 @@ import type { GetterTree, MutationTree, ActionTree } from "vuex";
 import Onboard from "@web3-onboard/core";
 import type { OnboardAPI } from "@web3-onboard/core";
 import injectedModule from "@web3-onboard/injected-wallets";
-// import fortmaticModule from "@web3-onboard/fortmatic";
-// import gnosisModule from "@web3-onboard/gnosis";
-// import mewModule from "@web3-onboard/mew-wallet";
-// import portisModule from "@web3-onboard/portis";
-// import torusModule from "@web3-onboard/torus";
-// import coinbaseWalletModule from "@web3-onboard/coinbase";
-// import keepkeyModule from "@web3-onboard/keepkey";
-// import ledgerModule from "@web3-onboard/ledger";
-// import trezorModule from "@web3-onboard/trezor";
-// import dcentModule from "@web3-onboard/dcent";
 import walletConnectModule from "@web3-onboard/walletconnect";
 import type { IConnector } from "@walletconnect/types";
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -181,20 +171,13 @@ export const actions: ActionTree<OnboardState, OnboardState> = {
         theme: state.onboardTheme,
         wallets: [
           injectedModule(),
-          walletConnectModule(),
-          // ledgerModule(),
-          // trezorModule({
-          //   email: "support@zksync.io",
-          //   appUrl: "https://wallet.zksync.io",
-          // }),
-          // coinbaseWalletModule(),
-          // fortmaticModule({ apiKey: getters.options.apiKeys.FORTMATIC_KEY }),
-          // portisModule({ apiKey: getters.options.apiKeys.PORTIS_KEY }),
-          // keepkeyModule(),
-          // torusModule(),
-          // gnosisModule(),
-          // mewModule(),
-          // dcentModule(),
+          walletConnectModule({
+            version: 2,
+            projectId: "c37c6a422d315bf55a0c39000960afa4",
+            requiredChains: [30, 31], //rsk mainnet/testnet
+            dappUrl: location.toString(),
+            additionalOptionalMethods: ["eth_sendTransaction", "eth_signTransaction", "personal_sign", "eth_sign", "eth_signTypedData", "eth_signTypedData_v4"],
+          }),
         ],
         chains: Object.entries(getters.ethereumNetworksConfig as ZkEthereumNetworkConfig).map(([key, value]) => ({
           id: "0x" + value.id.toString(16),
