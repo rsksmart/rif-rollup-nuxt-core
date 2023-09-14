@@ -168,7 +168,8 @@ export function filterError(error: Error): string | undefined {
     } else if (error.message.includes("Fee is to low")) {
       return "Transaction fee was to low. Try again.";
     }
-    return error.message;
+    const msg = error.message.substring(0, error.message.indexOf("("));
+    return msg ? msg : error.message;
   }
   return "Unknown error";
 }
