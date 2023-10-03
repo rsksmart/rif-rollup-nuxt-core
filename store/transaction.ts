@@ -934,7 +934,7 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
     commit("setActiveTransactionStep", "finished");
     return response;
   },
-  async withdrawPendingTransaction({ getters, commit, dispatch, rootGetters }) {
+  async withdrawPendingTransaction({ getters, commit, dispatch, rootGetters }, { tokenSymbol, amount }) {
     try {
       if (rootGetters["zk-wallet/isRemoteWallet"]) {
         return;
@@ -947,12 +947,12 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       commit("setNewActiveTransaction", "WithdrawPending");
       commit("setActiveTransactionStep", "waitingForUserConfirmation");
       dispatch("zk-wallet/openWalletApp", undefined, { root: true });
-      const withdrawResponse = await syncWallet.withdrawPendingBalance(rootGetters["zk-account/address"], getters.symbol);
+      const withdrawResponse = await syncWallet.withdrawPendingBalance(rootGetters["zk-account/address"], tokenSymbol, amount);
       if (!getters.activeTransaction) {
         return;
       }
       commit("setActiveTransactionTxHash", withdrawResponse.hash);
-      commit("setActiveTransactionAmountToken", { token: getters.symbol, amount: getters.amountBigNumber.toString() });
+      commit("setActiveTransactionAmountToken", { token: tokenSymbol, amount: amount.toString() });
       commit("setActiveTransactionStep", "committing");
       await withdrawResponse.wait();
       if (!getters.activeTransaction) {
@@ -960,13 +960,13 @@ export const actions: ActionTree<TransactionState, TransactionState> = {
       }
       commit("setActiveTransactionStep", "updating");
       const dataPromises = [
-        dispatch("zk-balances/requestPendingBalance", { force: true, symbol: getters.symbol }, { root: true }),
+        dispatch("zk-balances/requestPendingBalance", { force: true, symbol: tokenSymbol }, { root: true }),
         dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: "RBTC" }, { root: true }),
         dispatch("zk-account/updateAccountState", true, { root: true }),
         dispatch("zk-history/getNewTransactionHistory", true, { root: true }),
       ];
       if (getters.symbol !== "RBTC") {
-        dataPromises.push(dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: getters.symbol }, { root: true }));
+        dataPromises.push(dispatch("zk-balances/requestEthereumBalance", { force: true, symbol: tokenSymbol }, { root: true }));
       }
       await Promise.all(dataPromises);
       if (!getters.activeTransaction) {
