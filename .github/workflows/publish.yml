@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 #v4
         with:
-          node-version: 'lts/*'
+          node-version: '18.x'
       - name: Install dependencies
         run: yarn install
       # - name: Run yarn test
