@@ -4464,9 +4464,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsksmart/rif-rollup-js-sdk@npm:^0.13.7-alpha":
-  version: 0.13.7-alpha
-  resolution: "@rsksmart/rif-rollup-js-sdk@npm:0.13.7-alpha"
+"@rsksmart/rif-rollup-js-sdk@npm:^0.13.10-alpha":
+  version: 0.13.10-alpha
+  resolution: "@rsksmart/rif-rollup-js-sdk@npm:0.13.10-alpha"
   dependencies:
     axios: ^0.21.2
     websocket: ^1.0.30
@@ -4475,7 +4475,7 @@ __metadata:
   peerDependencies:
     "@ethersproject/logger": ^5.4.0
     ethers: ^5.4.4
-  checksum: 5abf8ce489c203de9263431ab58689eaf178d90db582fcb002a344afd0418e012a32e4478167decd235566e946a99fe04e4c0755953ab9eed84e38387936ba99
+  checksum: e26dbd953284b52050a5fdb869ae3c813f6657f265dab3f3a1e57d59154bba44e27fd509772815ab8a2209b5876071aa36eac68ef3bbce36d0a9d958fd11ed31
   languageName: node
   linkType: hard
 
@@ -4492,7 +4492,7 @@ __metadata:
     "@nuxtjs/eslint-module": ^3.0.2
     "@nuxtjs/stylelint-module": ^4.0.0
     "@nuxtjs/tailwindcss": ^4.0.1
-    "@rsksmart/rif-rollup-js-sdk": ^0.13.7-alpha
+    "@rsksmart/rif-rollup-js-sdk": ^0.13.10-alpha
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/commit-analyzer": ^9.0.1
     "@semantic-release/git": ^10.0.1
